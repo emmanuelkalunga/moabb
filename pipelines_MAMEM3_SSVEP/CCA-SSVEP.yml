@@ -1,0 +1,13 @@
+name: SSVEP CCA
+
+paradigms:
+  - SSVEP
+
+pipeline:
+  - name: SSVEP_CCA
+    from: moabb.pipelines.classification
+    parameters:
+      n_harmonics: 3
+      interval: [1, 4]
+      freqs:
+        { "6.66": 33029, "7.50": 33028, "8.57": 33027, "10.00": 33026, "12.00": 33025 }

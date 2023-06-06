@@ -1,0 +1,15 @@
+name: TRCA-SSVEP
+paradigms:
+  - SSVEP
+
+citations:
+  - https://doi.org/10.1109/TBME.2017.2694818
+
+pipeline:
+  - name: SSVEP_TRCA
+    from: moabb.pipelines.classification
+    parameters:
+      n_fbands: 5
+      interval: [1, 4]
+      freqs:
+        { "6.66": 33029, "7.50": 33028, "8.57": 33027, "10.00": 33026, "12.00": 33025 }
